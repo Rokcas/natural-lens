@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://drsvgmon1vckq"]
+
+[ext_resource type="Script" path="res://scenes/entities/player.gd" id="1_45mqv"]
+
+[sub_resource type="Gradient" id="Gradient_ryk3f"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rhp5l"]
+gradient = SubResource("Gradient_ryk3f")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hpfo"]
+size = Vector2(56, 56)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_45mqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_rhp5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2hpfo")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7cqu4nkqtg5"]
+
+[ext_resource type="PackedScene" uid="uid://dx4e7pj45v71l" path="res://scenes/entities/wall.tscn" id="1_ml68j"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7g8iu"]
+size = Vector2(648, 648)
+
+[node name="Grid" type="Sprite2D"]
+texture = SubResource("PlaceholderTexture2D_7g8iu")
+
+[node name="Wall" parent="." instance=ExtResource("1_ml68j")]
+position = Vector2(-1, -304)
+scale = Vector2(10, 0.5)
+
+[node name="Wall2" parent="." instance=ExtResource("1_ml68j")]
+position = Vector2(296, -1)
+rotation = 1.5708
+scale = Vector2(10, 0.5)
+
+[node name="Wall3" parent="." instance=ExtResource("1_ml68j")]
+position = Vector2(1, 299)
+scale = Vector2(10, 0.5)
+
+[node name="Wall4" parent="." instance=ExtResource("1_ml68j")]
+position = Vector2(-301, -0.999998)
+rotation = 1.5708
+scale = Vector2(10, 0.5)
