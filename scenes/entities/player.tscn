@@ -3,12 +3,16 @@
 [ext_resource type="Script" path="res://scenes/entities/player.gd" id="1_45mqv"]
 
 [sub_resource type="Gradient" id="Gradient_ryk3f"]
+offsets = PackedFloat32Array(0, 0.532468, 1)
+colors = PackedColorArray(1.54018e-06, 0.853856, 0.858853, 1, 0.841564, 4.04298e-06, 0.523766, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rhp5l"]
 gradient = SubResource("Gradient_ryk3f")
+width = 30
+height = 30
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hpfo"]
-size = Vector2(56, 56)
+size = Vector2(24, 24)
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_45mqv")

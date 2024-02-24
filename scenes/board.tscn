@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy7h6w3yirl7d"]
+
+[ext_resource type="Texture2D" uid="uid://boev1mxkt21h0" path="res://assets/board.png" id="1_ncfng"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu7yd"]
+texture = ExtResource("1_ncfng")
+texture_region_size = Vector2i(35, 35)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7wi2c"]
+tile_size = Vector2i(35, 35)
+sources/0 = SubResource("TileSetAtlasSource_vu7yd")
+
+[node name="Board" type="TileMap"]
+tile_set = SubResource("TileSet_7wi2c")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 131072, 0, 65540, 131072, 1, 131076, 131072, 1, 196612, 131072, 1, 262147, 65536, 2, 262146, 65536, 2, 262145, 65536, 2, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262148, 131072, 2, 262144, 0, 2, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 196610, 65536, 1, 196611, 65536, 1, 131075, 65536, 1, 65539, 65536, 1, 65538, 65536, 1, 131074, 65536, 1)

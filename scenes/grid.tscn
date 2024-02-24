@@ -1,27 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba7cqu4nkqtg5"]
+[gd_scene load_steps=6 format=3 uid="uid://ba7cqu4nkqtg5"]
 
-[ext_resource type="PackedScene" uid="uid://dx4e7pj45v71l" path="res://scenes/entities/wall.tscn" id="1_ml68j"]
+[ext_resource type="PackedScene" uid="uid://l7t8djcubit5" path="res://scenes/entities/wall.tscn" id="1_ml68j"]
+[ext_resource type="Texture2D" uid="uid://cwu4uslx7m51t" path="res://assets/wood.png" id="2_8fgeg"]
+[ext_resource type="PackedScene" uid="uid://cy7h6w3yirl7d" path="res://scenes/board.tscn" id="3_7oe21"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7g8iu"]
-size = Vector2(648, 648)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vej0n"]
+texture = ExtResource("2_8fgeg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
 
-[node name="Grid" type="Sprite2D"]
-texture = SubResource("PlaceholderTexture2D_7g8iu")
+[sub_resource type="TileSet" id="TileSet_tyb5a"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_vej0n")
+
+[node name="Grid" type="CanvasGroup"]
+
+[node name="Wood" type="TileMap" parent="."]
+scale = Vector2(0.6, 0.6)
+tile_set = SubResource("TileSet_tyb5a")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 1, 0, 1, 1, 0, 0, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 65542, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 393221, 1, 0, 393220, 1, 0, 393219, 1, 0, 393218, 1, 0, 393217, 1, 0, 393216, 1, 0, 327680, 1, 0, 262144, 1, 0, 196608, 1, 0, 327681, 1, 0, 327682, 1, 0, 262146, 1, 0, 196610, 1, 0, 196609, 1, 0, 262145, 1, 0, 262147, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 262149, 1, 0, 196613, 1, 0, 131077, 1, 0, 65541, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 131075, 1, 0, 65539, 1, 0, 196611, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0)
 
 [node name="Wall" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(-1, -304)
-scale = Vector2(10, 0.5)
+position = Vector2(160, -32)
+scale = Vector2(5, 1)
 
 [node name="Wall2" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(296, -1)
-rotation = 1.5708
-scale = Vector2(10, 0.5)
+position = Vector2(112, 304)
+scale = Vector2(5, 1)
 
 [node name="Wall3" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(1, 299)
-scale = Vector2(10, 0.5)
+position = Vector2(-32, 112)
+rotation = 1.5708
+scale = Vector2(5, 1)
 
 [node name="Wall4" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(-301, -0.999998)
+position = Vector2(304, 160)
 rotation = 1.5708
-scale = Vector2(10, 0.5)
+scale = Vector2(5, 1)
+
+[node name="Board" parent="." instance=ExtResource("3_7oe21")]
+position = Vector2(16, 16)
+scale = Vector2(1.35, 1.35)
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 131072, 0, 65540, 131072, 1, 131076, 131072, 1, 196612, 131072, 1, 262147, 65536, 2, 262146, 65536, 2, 262145, 65536, 2, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262148, 131072, 2, 262144, 0, 2, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 196610, 65536, 1, 196611, 65536, 1, 65539, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 131075, 65536, 1)
