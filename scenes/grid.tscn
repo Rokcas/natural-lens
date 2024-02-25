@@ -22,23 +22,22 @@ format = 2
 layer_0/tile_data = PackedInt32Array(2, 1, 0, 1, 1, 0, 0, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 65542, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 393221, 1, 0, 393220, 1, 0, 393219, 1, 0, 393218, 1, 0, 393217, 1, 0, 393216, 1, 0, 327680, 1, 0, 262144, 1, 0, 196608, 1, 0, 327681, 1, 0, 327682, 1, 0, 262146, 1, 0, 196610, 1, 0, 196609, 1, 0, 262145, 1, 0, 262147, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 262149, 1, 0, 196613, 1, 0, 131077, 1, 0, 65541, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 131075, 1, 0, 65539, 1, 0, 196611, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0)
 
 [node name="Wall" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(160, -32)
+position = Vector2(143, -15)
 scale = Vector2(5, 1)
 
 [node name="Wall2" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(112, 304)
+position = Vector2(124, 284)
 scale = Vector2(5, 1)
 
 [node name="Wall3" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(-32, 112)
+position = Vector2(-15, 125)
 rotation = 1.5708
 scale = Vector2(5, 1)
 
 [node name="Wall4" parent="." instance=ExtResource("1_ml68j")]
-position = Vector2(304, 160)
+position = Vector2(284, 158)
 rotation = 1.5708
 scale = Vector2(5, 1)
 
 [node name="Board" parent="." instance=ExtResource("3_7oe21")]
-position = Vector2(16, 16)
-scale = Vector2(1.35, 1.35)
+position = Vector2(12, 12)

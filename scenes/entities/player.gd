@@ -1,6 +1,8 @@
 extends Area2D
 
-const tile_size = 64 * 0.6
+# Approx. size of tiles. Right now it's slightly misaligned
+const BOARD_BASE_POS = Vector2(16, 16)
+const TILE_SIZE = 35
 
 var inputs = {
 	"Right": Vector2.RIGHT,
@@ -16,15 +18,14 @@ func _unhandled_input(event):
 			move(dir)
 
 func move(dir):
-	ray.target_position = inputs[dir] * tile_size
+	ray.target_position = inputs[dir] * TILE_SIZE
 	ray.force_raycast_update()
 	if !ray.is_colliding():
-		position += inputs[dir] * tile_size
+		position += inputs[dir] * TILE_SIZE
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = position.snapped(Vector2.ONE * tile_size)
-	position += Vector2.ONE * tile_size/2
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
