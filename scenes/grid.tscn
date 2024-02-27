@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba7cqu4nkqtg5"]
+[gd_scene load_steps=8 format=3 uid="uid://ba7cqu4nkqtg5"]
 
+[ext_resource type="Script" path="res://scenes/grid.gd" id="1_m0f7g"]
 [ext_resource type="PackedScene" uid="uid://l7t8djcubit5" path="res://scenes/entities/wall.tscn" id="1_ml68j"]
 [ext_resource type="Texture2D" uid="uid://cwu4uslx7m51t" path="res://assets/wood.png" id="2_8fgeg"]
 [ext_resource type="PackedScene" uid="uid://cy7h6w3yirl7d" path="res://scenes/board.tscn" id="3_7oe21"]
+[ext_resource type="PackedScene" uid="uid://drsvgmon1vckq" path="res://scenes/entities/player.tscn" id="4_36grf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vej0n"]
 texture = ExtResource("2_8fgeg")
@@ -14,6 +16,7 @@ tile_size = Vector2i(64, 64)
 sources/1 = SubResource("TileSetAtlasSource_vej0n")
 
 [node name="Grid" type="CanvasGroup"]
+script = ExtResource("1_m0f7g")
 
 [node name="Wood" type="TileMap" parent="."]
 scale = Vector2(0.6, 0.6)
@@ -41,3 +44,6 @@ scale = Vector2(5, 1)
 
 [node name="Board" parent="." instance=ExtResource("3_7oe21")]
 position = Vector2(12, 12)
+
+[node name="Player" parent="." instance=ExtResource("4_36grf")]
+position = Vector2(69, 69)
