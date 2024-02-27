@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bnuj2d2vx5xgi"]
+
+[node name="BoardLine" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.501961, 0.501961, 0.501961, 1)
+polygon = PackedVector2Array(0, -3, 0, 3, 35, 3, 35, -3)
