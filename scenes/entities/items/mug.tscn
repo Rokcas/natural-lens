@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://s2ke5ixs0van"]
+
+[ext_resource type="Texture2D" uid="uid://0o8efe4oio3d" path="res://assets/items/mug.png" id="1_vb361"]
+
+[node name="Mug" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vb361")

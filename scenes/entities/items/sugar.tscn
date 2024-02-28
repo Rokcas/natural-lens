@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c78a08hw5vqxf"]
+
+[ext_resource type="Texture2D" uid="uid://cubow052vde2v" path="res://assets/items/sugar.png" id="1_c8jbf"]
+
+[node name="Item" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c8jbf")
