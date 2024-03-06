@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://s2ke5ixs0van"]
+[gd_scene load_steps=3 format=3 uid="uid://s2ke5ixs0van"]
 
-[ext_resource type="Texture2D" uid="uid://0o8efe4oio3d" path="res://assets/items/mug.png" id="1_vb361"]
+[ext_resource type="Texture2D" uid="uid://1mjf30hyw62q" path="res://assets/board_items.png" id="1_bj5bj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36v7p"]
+atlas = ExtResource("1_bj5bj")
+region = Rect2(182, 5, 39, 39)
 
 [node name="Mug" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_vb361")
+texture = SubResource("AtlasTexture_36v7p")

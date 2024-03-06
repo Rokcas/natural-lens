@@ -11,8 +11,7 @@ const Items = [
 	Sugar,
 	CoffeePot,
 	Mug,
-	Flower,
-	
+	Flower
 ]
 
 func is_adj(a : Vector2i, b : Vector2i) -> bool:
@@ -66,6 +65,7 @@ func get_items(seq : Array[Vector2i], k : int) -> Dictionary:
 		item_locs[seq[selected[i]]] = Items[i].instantiate()
 	item_locs[seq[-1]] = Target.instantiate()
 	return item_locs
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5jogdi8l72qx"]
+[gd_scene load_steps=3 format=3 uid="uid://c5jogdi8l72qx"]
 
-[ext_resource type="Texture2D" uid="uid://ca23e2heleuom" path="res://assets/items/flower.png" id="1_cksvj"]
+[ext_resource type="Texture2D" uid="uid://1mjf30hyw62q" path="res://assets/board_items.png" id="1_5j0g3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgls4"]
+atlas = ExtResource("1_5j0g3")
+region = Rect2(47, 5, 39, 39)
 
 [node name="Flower" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_cksvj")
+texture = SubResource("AtlasTexture_fgls4")

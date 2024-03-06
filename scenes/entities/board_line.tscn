@@ -3,5 +3,5 @@
 [node name="BoardLine" type="Node2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(1, 0, 0, 1)
+color = Color(0.65098, 0, 0, 1)
 polygon = PackedVector2Array(0, -3, 0, 3, 35, 3, 35, -3)

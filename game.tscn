@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp667hw5f5d5k"]
+[gd_scene load_steps=3 format=3 uid="uid://dp667hw5f5d5k"]
 
 [ext_resource type="PackedScene" uid="uid://ba7cqu4nkqtg5" path="res://scenes/grid.tscn" id="1_xkthq"]
+[ext_resource type="PackedScene" uid="uid://crdrbf1bf1klb" path="res://scenes/forest.tscn" id="2_xyr7v"]
 
 [node name="Game" type="CanvasLayer"]
 
 [node name="Grid" parent="." instance=ExtResource("1_xkthq")]
+
+[node name="Forest" parent="." instance=ExtResource("2_xyr7v")]
+position = Vector2(270, 0)

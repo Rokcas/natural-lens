@@ -65,6 +65,12 @@ func puzzle_completed() -> bool:
 			return false
 	return true
 
+func calc_points():
+	# Double points for full clear
+	if player_pos_list.size() == BOARD_SIZE * BOARD_SIZE:
+		return player_pos_list.size() * 2
+	return player_pos_list.size()
+
 func update_player_position():
 	$Player.position = BOARD_BASE_POS + TILE_SIZE * Vector2(player_pos)
 	while Breadcrumbs.size() + 1 > player_pos_list.size():
@@ -81,7 +87,7 @@ func update_player_position():
 		Breadcrumbs.push_back(line)
 		add_child(line)
 	if puzzle_completed():
-		points += player_pos_list.size()
+		points += calc_points()
 		print("Points:", points)
 		debug_generator()
 
@@ -127,14 +133,12 @@ func _ready():
 	update_player_position()
 
 func _unhandled_input(event : InputEvent):
-	# DEBUG: Regenerate random walk
-	if event.is_action_pressed("ui_accept"):
-		debug_generator()
 	for k in INPUTS.keys():
 		if event.is_action_pressed(k):
 			var dir = INPUTS[k]
 			if do_move(dir):
 				player_pos += dir
+				$Player.play_anim_for_dir(k)
 				update_player_position()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

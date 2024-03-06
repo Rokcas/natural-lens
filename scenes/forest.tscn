@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://crdrbf1bf1klb"]
+
+[ext_resource type="Texture2D" uid="uid://400gxy12k4fh" path="res://assets/forest-sheet.png" id="1_6rbgm"]
+[ext_resource type="Texture2D" uid="uid://cuf2206xxu2gx" path="res://assets/barista-sheet.png" id="2_831qc"]
+[ext_resource type="Texture2D" uid="uid://d18j4xclysqqm" path="res://assets/bush-sheet.png" id="3_urm0m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anr5c"]
+atlas = ExtResource("1_6rbgm")
+region = Rect2(0, 0, 210, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwrq5"]
+atlas = ExtResource("1_6rbgm")
+region = Rect2(210, 0, 210, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyunj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anr5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwrq5")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 0.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xukdh"]
+atlas = ExtResource("2_831qc")
+region = Rect2(0, 0, 210, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2wkl"]
+atlas = ExtResource("2_831qc")
+region = Rect2(210, 0, 210, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nk5p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xukdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2wkl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.6
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6aak"]
+atlas = ExtResource("3_urm0m")
+region = Rect2(0, 0, 210, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3npab"]
+atlas = ExtResource("3_urm0m")
+region = Rect2(210, 0, 210, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66uqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6aak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3npab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="Forest" type="Node2D"]
+
+[node name="Forest" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qyunj")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.0629218
+centered = false
+
+[node name="Barista" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nk5p2")
+autoplay = "default"
+centered = false
+
+[node name="Bush" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_66uqv")
+frame_progress = 0.337563
+centered = false

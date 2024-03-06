@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c78a08hw5vqxf"]
+[gd_scene load_steps=3 format=3 uid="uid://c78a08hw5vqxf"]
 
-[ext_resource type="Texture2D" uid="uid://cubow052vde2v" path="res://assets/items/sugar.png" id="1_c8jbf"]
+[ext_resource type="Texture2D" uid="uid://1mjf30hyw62q" path="res://assets/board_items.png" id="1_gn2ok"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1063"]
+atlas = ExtResource("1_gn2ok")
+region = Rect2(45, 48, 39, 39)
 
 [node name="Item" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_c8jbf")
+texture = SubResource("AtlasTexture_k1063")

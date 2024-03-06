@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cus6gekui7d5w"]
+[gd_scene load_steps=3 format=3 uid="uid://cus6gekui7d5w"]
 
-[ext_resource type="Texture2D" uid="uid://b57wobjv2m743" path="res://assets/items/coffeepot.png" id="1_orhg2"]
+[ext_resource type="Texture2D" uid="uid://1mjf30hyw62q" path="res://assets/board_items.png" id="1_ea45w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6giw"]
+atlas = ExtResource("1_ea45w")
+region = Rect2(3, 50, 39, 39)
 
 [node name="CoffeePot" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_orhg2")
+texture = SubResource("AtlasTexture_h6giw")
